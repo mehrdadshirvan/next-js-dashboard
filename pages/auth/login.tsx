@@ -3,11 +3,16 @@ import Head from "next/head";
 import {useState} from "react";
 
 function login() {
-    // const [name, setName] = useState(0);
-    // const [password, setPassword] = useState(0);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [name, setName] = useState(0);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [password, setPassword] = useState(0);
     function LoginRequest(){
+
         console.log(1)
     }
+    // @ts-ignore
+    // @ts-ignore
     return (
         <>
             <Head>
@@ -20,6 +25,7 @@ function login() {
                     <form>
                         <input type="text"
                                name="mobile"
+                               onChange={ e => setName(e.target.value)}
                                id="mobile"/>
                         <input type='text' name='password' id='password'/>
                         <button type='button' onClick={LoginRequest}>
