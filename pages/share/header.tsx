@@ -5,8 +5,18 @@ function Header(){
         <>
             <ul>
                 <li>
+                    <Link href={`/`} key={'homeRoute'}>
+                        Home
+                    </Link>
+                </li>
+                <li>
                     <Link href={`/auth/login`} key={'loginRoute'}>
                         Login
+                    </Link>
+                </li>
+                <li>
+                    <Link href={`/auth/register`} key={'registerRoute'}>
+                        Register
                     </Link>
                 </li>
             </ul>
