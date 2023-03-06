@@ -4,6 +4,13 @@ const nextConfig = {
   images: {
     domains: ['www.rosena.ir','www.mehrdadshirvan.ir','*.*'],
   },
+  theme: {
+    extend: {
+      zIndex: {
+        '100': '100',
+      }
+    }
+  }
 }
 
 module.exports = nextConfig
