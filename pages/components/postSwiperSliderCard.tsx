@@ -9,7 +9,7 @@ const PostSwiperSliderCard = ({post}) => {
     // @ts-ignore
     return (
 
-        <div className={`card border p-2 rounded shadow`}>
+        <div className={`card border p-2 rounded shadow transition`}>
             <div>
                 <div className={`p-2`}>
                     <Link href={`post/${post.id}`}>

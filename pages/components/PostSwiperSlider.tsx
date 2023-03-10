@@ -5,9 +5,9 @@ import {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
 import {BsBookmarks} from "react-icons/bs";
 
 // @ts-ignore
-const PostSwiperSlider = ({posts, title, slidesPerView = 5}) => {
+const PostSwiperSlider = ({posts, title, slidesPerView = 5,className=''}) => {
     return (
-        <div className={`mb-4`}>
+        <div className={`mb-4 ${className}`}>
             <div className={`row mb-3`}>
                 <h3 className={`font-18 font-bold`}>
                     <BsBookmarks className={`inline-block text-green-800`}/>
