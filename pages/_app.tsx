@@ -3,7 +3,14 @@ import type {AppProps} from 'next/app';
 import Head from 'next/head';
 import Footer from "@/pages/share/footer";
 import Header from "@/pages/share/header";
-
+import Router from 'next/router';
+// @ts-ignore
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css'; //styles of nprogress
+//Binding events.
+Router.events.on('routeChangeStart', () => NProgress.start());
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function App({Component, pageProps}: AppProps) {
     return (
@@ -15,11 +22,13 @@ export default function App({Component, pageProps}: AppProps) {
                       href="/favicon.ico"/>
             </Head>
 
-            <Header />
+            <Header/>
 
-            <Component {...pageProps} />
+            <div className={`my-2`}>
+                <Component {...pageProps} />
+            </div>
 
-            <Footer />
+            <Footer/>
         </>
     )
 
