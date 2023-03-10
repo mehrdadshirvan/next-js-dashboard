@@ -9,7 +9,7 @@ import PostSwiperSlider from "@/pages/components/PostSwiperSlider";
 
 function Home(props: { posts: any; postsMostView: any }) {
     const {posts, postsMostView} = props;
-    console.log(props)
+    // console.log(props)
     return (
         <>
             <Head>
@@ -20,7 +20,7 @@ function Home(props: { posts: any; postsMostView: any }) {
             </Head>
             <main className=''>
                 <div className={`container mx-auto `}>
-                    <PostSwiperSlider posts={posts} title="Popular post"/>
+                    <PostSwiperSlider posts={posts} title="Popular post" className={`mt-4`}/>
                 </div>
             </main>
         </>
