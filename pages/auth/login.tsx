@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Head from "next/head";
 import {useState} from "react";
-import {baseUrl} from "@/pages/helper";
+import {baseUrl, checkAuthLogin} from "@/pages/helper";
 
-function login() {
+function login(){
+    
+    checkAuthLogin()
+    
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [form, setForm] = useState({
         'mobile': "09228417016",
@@ -21,19 +24,22 @@ function login() {
     const submitHandler = async (event: { preventDefault: () => void; }) => {
         event.preventDefault();
         // let url = baseUrl('login');
-        let res = await fetch(baseUrl('login'), {
-            method: "POST",
-            body: JSON.stringify(form),
-            redirect: 'follow',
-            headers: {'Accept':'application/json','Content-Type':'application/json'},
-        });
-        res = await res.json();
+        //send req and Done
+        // let res = await fetch(baseUrl('login'), {
+        //     method: "POST",
+        //     body: JSON.stringify(form),
+        //     redirect: 'follow',
+        //     headers: {'Accept':'application/json','Content-Type':'application/json'},
+        // });
+        // res = await res.json();
         // if(res.statusCode === 200){
-        console.log(res)
+        // console.log(res)
         //     localStorage.setItem('_ut', '1')
         // }else{
         //     localStorage.removeItem('_ut');
         // }
+        localStorage.setItem('mobile',form.mobile);
+        localStorage.setItem('password',form.password);
     }
     return (
         <>
