@@ -18,7 +18,7 @@ function Header(){
                                         Login
                                     </Link>
                                 </li>
-                                <li className={`hover:bg-gray-200`}>
+                                <li className={`hover:bg-gray-200 `} >
                                     <Link href={`/auth/register`} key={'registerRoute'} className={`py-2 px-2 inline-block`}>
                                         Register
                                     </Link>
