@@ -7,12 +7,14 @@ import Router from 'next/router';
 // @ts-ignore
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css'; //styles of nprogress
+import { checkAuthLogin } from './helper';
 //Binding events.
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function App({Component, pageProps}: AppProps) {
+
     return (
         <>
             <Head>

@@ -9,6 +9,7 @@ export function checkAuthLogin(){
         let mobile = window.localStorage.getItem('mobile');
         let password = window.localStorage.getItem('password');
         if(mobile&&password) {
+            // return true;
             location.href = '/';
         }else{
             localStorage.clear();
